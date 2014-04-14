@@ -1,0 +1,208 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.26/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 warn package.json boxSDK@0.0.1 No README data
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/Martin.Becker/Documents/node_projects/boxSDK',
+6 verbose install   [ 'request', 'XMLHttpRequest', 'browser-request' ] ]
+7 info preinstall boxSDK@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'request@latest', null ]
+10 verbose cache add name=undefined spec="request@latest" args=["request@latest",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'request@latest',
+11 verbose parsed url   path: 'request@latest',
+11 verbose parsed url   href: 'request@latest' }
+12 verbose cache add name="request" spec="latest" args=["request","latest"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'latest',
+13 verbose parsed url   path: 'latest',
+13 verbose parsed url   href: 'latest' }
+14 verbose addNamed [ 'request', 'latest' ]
+15 verbose addNamed [ null, null ]
+16 verbose cache add [ 'XMLHttpRequest@latest', null ]
+17 verbose cache add name=undefined spec="XMLHttpRequest@latest" args=["XMLHttpRequest@latest",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'XMLHttpRequest@latest',
+18 verbose parsed url   path: 'XMLHttpRequest@latest',
+18 verbose parsed url   href: 'XMLHttpRequest@latest' }
+19 verbose cache add name="XMLHttpRequest" spec="latest" args=["XMLHttpRequest","latest"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'latest',
+20 verbose parsed url   path: 'latest',
+20 verbose parsed url   href: 'latest' }
+21 verbose addNamed [ 'XMLHttpRequest', 'latest' ]
+22 verbose addNamed [ null, null ]
+23 silly lockFile 5da6dfb1-request-latest request@latest
+24 verbose lock request@latest /Users/Martin.Becker/.npm/5da6dfb1-request-latest.lock
+25 verbose cache add [ 'browser-request@latest', null ]
+26 verbose cache add name=undefined spec="browser-request@latest" args=["browser-request@latest",null]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: 'browser-request@latest',
+27 verbose parsed url   path: 'browser-request@latest',
+27 verbose parsed url   href: 'browser-request@latest' }
+28 verbose cache add name="browser-request" spec="latest" args=["browser-request","latest"]
+29 verbose parsed url { protocol: null,
+29 verbose parsed url   slashes: null,
+29 verbose parsed url   auth: null,
+29 verbose parsed url   host: null,
+29 verbose parsed url   port: null,
+29 verbose parsed url   hostname: null,
+29 verbose parsed url   hash: null,
+29 verbose parsed url   search: null,
+29 verbose parsed url   query: null,
+29 verbose parsed url   pathname: 'latest',
+29 verbose parsed url   path: 'latest',
+29 verbose parsed url   href: 'latest' }
+30 verbose addNamed [ 'browser-request', 'latest' ]
+31 verbose addNamed [ null, null ]
+32 silly lockFile 07c09109-browser-request-latest browser-request@latest
+33 verbose lock browser-request@latest /Users/Martin.Becker/.npm/07c09109-browser-request-latest.lock
+34 silly lockFile a772b9f5-XMLHttpRequest-latest XMLHttpRequest@latest
+35 verbose lock XMLHttpRequest@latest /Users/Martin.Becker/.npm/a772b9f5-XMLHttpRequest-latest.lock
+36 info addNameTag [ 'request', 'latest' ]
+37 info addNameTag [ 'browser-request', 'latest' ]
+38 info addNameTag [ 'XMLHttpRequest', 'latest' ]
+39 verbose url raw XMLHttpRequest
+40 verbose url resolving [ 'https://registry.npmjs.org/', './XMLHttpRequest' ]
+41 verbose url resolved https://registry.npmjs.org/XMLHttpRequest
+42 info trying registry request attempt 1 at 11:06:45
+43 http GET https://registry.npmjs.org/XMLHttpRequest
+44 verbose url raw request
+45 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+46 verbose url resolved https://registry.npmjs.org/request
+47 info trying registry request attempt 1 at 11:06:46
+48 verbose etag "2NCFJQR6M1BKR5TUNO4PT34KZ"
+49 http GET https://registry.npmjs.org/request
+50 verbose url raw browser-request
+51 verbose url resolving [ 'https://registry.npmjs.org/', './browser-request' ]
+52 verbose url resolved https://registry.npmjs.org/browser-request
+53 info trying registry request attempt 1 at 11:06:46
+54 verbose etag "31RF5DCKC7C2NDM88U8FL1I90"
+55 http GET https://registry.npmjs.org/browser-request
+56 http 304 https://registry.npmjs.org/request
+57 silly registry.get cb [ 304,
+57 silly registry.get   { date: 'Mon, 14 Apr 2014 10:06:46 GMT',
+57 silly registry.get     server: 'Apache',
+57 silly registry.get     via: '1.1 varnish',
+57 silly registry.get     'last-modified': 'Mon, 14 Apr 2014 10:06:46 GMT',
+57 silly registry.get     'cache-control': 'max-age=1',
+57 silly registry.get     etag: '"2NCFJQR6M1BKR5TUNO4PT34KZ"',
+57 silly registry.get     'x-served-by': 'cache-lcy1133-LCY',
+57 silly registry.get     'x-cache': 'HIT',
+57 silly registry.get     'x-cache-hits': '1',
+57 silly registry.get     'x-timer': 'S1397470006.351821423,VS0,VE1',
+57 silly registry.get     vary: 'Accept',
+57 silly registry.get     'content-length': '0',
+57 silly registry.get     'keep-alive': 'timeout=10, max=50',
+57 silly registry.get     connection: 'Keep-Alive' } ]
+58 verbose etag request from cache
+59 verbose addNamed [ 'request', '2.34.0' ]
+60 verbose addNamed [ '2.34.0', '2.34.0' ]
+61 silly lockFile a8edf972-request-2-34-0 request@2.34.0
+62 verbose lock request@2.34.0 /Users/Martin.Becker/.npm/a8edf972-request-2-34-0.lock
+63 silly lockFile a8edf972-request-2-34-0 request@2.34.0
+64 silly lockFile a8edf972-request-2-34-0 request@2.34.0
+65 silly lockFile 5da6dfb1-request-latest request@latest
+66 silly lockFile 5da6dfb1-request-latest request@latest
+67 info already installed request@2.34.0
+68 http 304 https://registry.npmjs.org/browser-request
+69 silly registry.get cb [ 304,
+69 silly registry.get   { date: 'Mon, 14 Apr 2014 10:06:46 GMT',
+69 silly registry.get     server: 'Apache',
+69 silly registry.get     via: '1.1 varnish',
+69 silly registry.get     'last-modified': 'Mon, 14 Apr 2014 10:06:46 GMT',
+69 silly registry.get     'cache-control': 'max-age=1',
+69 silly registry.get     etag: '"31RF5DCKC7C2NDM88U8FL1I90"',
+69 silly registry.get     'x-served-by': 'cache-lcy1130-LCY',
+69 silly registry.get     'x-cache': 'MISS',
+69 silly registry.get     'x-cache-hits': '0',
+69 silly registry.get     'x-timer': 'S1397470006.356742859,VS0,VE89',
+69 silly registry.get     vary: 'Accept',
+69 silly registry.get     'content-length': '0',
+69 silly registry.get     'keep-alive': 'timeout=10, max=50',
+69 silly registry.get     connection: 'Keep-Alive' } ]
+70 verbose etag browser-request from cache
+71 verbose addNamed [ 'browser-request', '0.3.1' ]
+72 verbose addNamed [ '0.3.1', '0.3.1' ]
+73 silly lockFile bcaae615-browser-request-0-3-1 browser-request@0.3.1
+74 verbose lock browser-request@0.3.1 /Users/Martin.Becker/.npm/bcaae615-browser-request-0-3-1.lock
+75 silly lockFile bcaae615-browser-request-0-3-1 browser-request@0.3.1
+76 silly lockFile bcaae615-browser-request-0-3-1 browser-request@0.3.1
+77 silly lockFile 07c09109-browser-request-latest browser-request@latest
+78 silly lockFile 07c09109-browser-request-latest browser-request@latest
+79 info already installed browser-request@0.3.1
+80 http 404 https://registry.npmjs.org/XMLHttpRequest
+81 silly registry.get cb [ 404,
+81 silly registry.get   { date: 'Mon, 14 Apr 2014 10:06:46 GMT',
+81 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+81 silly registry.get     'content-type': 'application/json',
+81 silly registry.get     via: '1.1 varnish',
+81 silly registry.get     'cache-control': 'max-age=0',
+81 silly registry.get     'content-length': '52',
+81 silly registry.get     'accept-ranges': 'bytes',
+81 silly registry.get     age: '0',
+81 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-lcy1125-LCY',
+81 silly registry.get     'x-cache': 'MISS, MISS',
+81 silly registry.get     'x-cache-hits': '0, 0',
+81 silly registry.get     'x-timer': 'S1397470006.352171898,VS0,VS37,VE129,VE169',
+81 silly registry.get     'keep-alive': 'timeout=10, max=50',
+81 silly registry.get     connection: 'Keep-Alive' } ]
+82 silly lockFile a772b9f5-XMLHttpRequest-latest XMLHttpRequest@latest
+83 silly lockFile a772b9f5-XMLHttpRequest-latest XMLHttpRequest@latest
+84 error 404 'XMLHttpRequest' is not in the npm registry.
+84 error 404 You should bug the author to publish it
+84 error 404 It was specified as a dependency of 'boxSDK'
+84 error 404
+84 error 404 Note that you can also install from a
+84 error 404 tarball, folder, or http url, or git url.
+85 error System Darwin 13.1.0
+86 error command "/usr/local/Cellar/node/0.10.26/bin/node" "/usr/local/bin/npm" "install"
+87 error cwd /Users/Martin.Becker/Documents/node_projects/boxSDK
+88 error node -v v0.10.26
+89 error npm -v 1.4.3
+90 error code E404
+91 verbose exit [ 1, true ]
