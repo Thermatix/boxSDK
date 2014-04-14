@@ -35,7 +35,15 @@ You can also revoke tokens, it will respond with 200 if logout was sucessfull or
 
 		var client = clientBuilder.create()
 
-		client.revokeToken('ACCESS TOKEN' or 'REFRESH TOKEN')
+		callback = function(response,statuscode) {
+			if(statuscode == 200){
+				console.log(response)
+			}else{
+				console.log(response)
+			}
+		}
+
+		client.revokeToken('ACCESS TOKEN' or 'REFRESH TOKEN',callback)
 
 Lastly you can refresh your access token (not tested yet)
 
