@@ -21,8 +21,12 @@
 									 "sdk"
 	],
 	"dependencies" :{
-										"request"  : "latest"
+										"request"  : "latest",
+										"browser-request" : "latest"
 	},
+	"bundledDependencies": [
+		"browser-request"
+	],
 	"analyze" 		 : true,
 	"license" 		 : "BSD",
 	"engines"      :{
