@@ -49,7 +49,7 @@ You can also revoke tokens, it will respond with 200 if logout was successful or
 		client.revokeToken(('ACCESS TOKEN' or 'REFRESH TOKEN'),callback)
 ```
 
-Lastly you can refresh your access token (not tested yet)
+Lastly you can refresh your access token 
 ###Refresh Tokens:	
 ```javascript
 		var client = clientBuilder.create()
