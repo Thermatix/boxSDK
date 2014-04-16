@@ -6,6 +6,7 @@ First make a client builder and pass the app ID and secret.
 
 <i>The client Builder should be outside of any requests, that way it's accessible from all requests; it's there so you don't have to give the client your appID and secret each time you need it.</i>
 ###Setup Client Factory:
+```javascript
 		var boxSDK = require('boxSDK')
 		var appSettings = {
 			appID: 'YOUR APP IDD',
@@ -13,15 +14,18 @@ First make a client builder and pass the app ID and secret.
 			callBackURL : 'YOUR CALLBACK URL' // only if you need this
 		}
 		var clientBuilder = boxSDK.clientBuilder(appSettings)
-
+```
 In your first request get the authurl and redirect the user.
 ###Authentication URL:
+```javascript		
 		var client = clientBuilder.create()
 		var path = client.authURL
 		res.redirect(path)
+```
 
 Then pass the auth code to the client and handle with callback function (i.e. store tokens in cookie like in example).
 ###Retrieve Access Tokens:
+```javascript
 	var client = clientBuilder.create()
 	callback = function(response, statusCode){
 		res.cookie.('accessToken',response.access_token,{maxAge: 60000 * 59})
@@ -29,9 +33,11 @@ Then pass the auth code to the client and handle with callback function (i.e. st
 		res.redirect('path to your website after authentication is finished')
 	}
 	var path = client.getToken('AUTH CODE',callback)
+```
 
 You can also revoke tokens, it will respond with 200 if logout was successful or 400 if it was not.
 ###Revoke Access Tokens
+```javascript
 		var client = clientBuilder.create()
 		callback = function(response,statuscode) {
 			if(statuscode == 200){
@@ -41,9 +47,11 @@ You can also revoke tokens, it will respond with 200 if logout was successful or
 			}
 		}
 		client.revokeToken(('ACCESS TOKEN' or 'REFRESH TOKEN'),callback)
+```
 
 Lastly you can refresh your access token (not tested yet)
 ###Refresh Tokens:	
+```javascript
 		var client = clientBuilder.create()
 		callback = function(repsponse, statusCode){
 			res.cookie.('accessToken',response.access_token,{maxAge: 60000 * 59})
@@ -51,13 +59,15 @@ Lastly you can refresh your access token (not tested yet)
 			res.redirect('some path')
 		}
 		var path = client.getRefreshToken('REFRESH TOKEN',callback) 
-
+```
 
 ##URL Builder:
 There is also the url builder you can use to make url building easier and more semantically readable.
 
+```javascript
 	var urlB = boxSDK.urlBuilder
 	var path = urlB.host('auth').object('token')
+```
 
 There are three 'hosts' you can use:
 
@@ -70,6 +80,7 @@ There are three 'hosts' you can use:
 You can use the client to make get or post requests like so.
 
 ###Get folders:
+```javascript
 	var client = clientBuilder.create('Access_Token')
 	var path = urlB.host('api').object('folders').action('items')
 	callback = function(response, statusCode){
@@ -77,8 +88,10 @@ You can use the client to make get or post requests like so.
 		console.log(statusCode)
 	}
 	client.get(path,callback)
+```
 
 ###Create folders:
+```javascript
 	var client = clientBuilder.create('Access_Token')
 	var path = urlB.host('api').object('folders')
 	var data = {"name":"New Folder", "parent": {"id": "11446498"}}
@@ -87,6 +100,7 @@ You can use the client to make get or post requests like so.
 		console.log(statusCode)
 	}
 	client.post(path,data,callback)
+```
 
 ##Other functions
 
