@@ -1,2 +1,5 @@
 test.js
 *.html
+*.jpg
+*.docx
+*.DS_Store
