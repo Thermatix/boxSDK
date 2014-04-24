@@ -1,7 +1,7 @@
 {
-	"name" 				 : "boxSDK",
+	"name" 				 : "boxsdk",
 	"preferGlobal" : false,
-	"version"      : "0.1.0",
+	"version"      : "0.1.15",
 	"author" 			 : "Thermatix <mbeckerwork@gmail.com>",
 	"description"  : "An SDK to make using the BOX API easier",
 	"contributors" :[],
@@ -24,12 +24,14 @@
 									 "sdk"
 	],
 	"dependencies" :{
-										"request"  : "latest"//,
-										// "browser-request" : "latest"
+										"request"  		: "latest",
+										"crypto" 			: "latest",
+										"querystring" : "latest",
+										"http" 				: "latest",
+										"url"  				: "latest",
+										"stream" 			: "latest",
+										"util" 				: "latest"
 	},
-	// "bundledDependencies": [
-		// "browser-request"
-	// ],
 	"analyze" 		 : true,
 	"license" 		 : "BSD",
 	"engines"      :{

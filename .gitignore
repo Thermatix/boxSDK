@@ -1,5 +1,9 @@
-test.js
+/node_modules
+
+*.DS_Store
 *.html
 *.jpg
 *.docx
-*.DS_Store
+*.tgz
+
+test.js
