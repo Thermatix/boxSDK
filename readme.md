@@ -104,14 +104,14 @@ You can use the client to make get or post requests like so.
 ```
 
 ##File uploading:
-Currently the client supports uploading files from the server to box, the best way to do this is to use the methodLayerfunction 'uploadFile'.
+Currently the client supports uploading files from the server to box, the best way to do this is to use the method Layer function 'uploadFile'.
 
 It will open the file and handle filename and formating so box can understand it.
 
 The file object requires specific formating:
 
-. filename = The whole filepath (the file name itself is taken automatically).
-. parent_id = The id of the folder you wish to upload to.
+- filename = The whole filepath (the file name itself is taken automatically)
+- parent_id = The id of the folder you wish to upload to
 
 The function requires a client, a file object and a callback, you can use it like so:
 ###File Upload with methodlayer function:
@@ -157,5 +157,5 @@ They're implemented one by one from top to bottom from in the same order as the 
 At the moment the only functions implemented are:
 
 - Folder (all functions)
-- Files(Some of them, up to file upload)
+- Files(all functions)(upload is partially supported via file from server and fata in binary format, can't directly stream from form)
 
