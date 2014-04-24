@@ -156,6 +156,6 @@ They're implemented one by one from top to bottom from in the same order as the 
 
 At the moment the only functions implemented are:
 
-.Folder (all functions)
-.Files(Some of them, up to file upload)
+- Folder (all functions)
+- Files(Some of them, up to file upload)
 
