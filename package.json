@@ -1,7 +1,7 @@
 {
 	"name" 				 : "boxSDK",
 	"preferGlobal" : false,
-	"version"      : "0.0.0",
+	"version"      : "0.0.1",
 	"author" 			 : "Thermatix <mbeckerwork@gmail.com>",
 	"description"  : "An SDK to make using the BOX API easier",
 	"contributors" :[],
@@ -15,14 +15,21 @@
 									 "type"    	 : "git",
 									 "url"     	 : "https://github.com/Thermatix/boxSDK.git"
 	},
+	"bugs": {
+	    "url": "http://github.com/Thermatix/boxSDK/issues"
+	    },
 	"keywords"     :[
 									 "api",
 									 "box",
 									 "sdk"
 	],
 	"dependencies" :{
-										"request"  : "latest"
+										"request"  : "latest",
+										"browser-request" : "latest"
 	},
+	"bundledDependencies": [
+		"browser-request"
+	],
 	"analyze" 		 : true,
 	"license" 		 : "BSD",
 	"engines"      :{
