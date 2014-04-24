@@ -120,7 +120,7 @@ var fileObject = {
 	filename: __dirname + '/b.docx',
 	parent_id: id
 }
-boxSDK.methodLayer.files.uploadFile (client, fileObject, 
+boxSDK.methodLayer.files.upload (client, fileObject, 
 	function(response,statCode){
 	console.log(response)
 })
