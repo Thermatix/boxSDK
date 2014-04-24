@@ -1,5 +1,5 @@
 #boxSDK for Node.js README
-For the moment You can use this to make Oauth easier, I'm adding methods to make calls easier but for the moment, Oauth is the main thing that works.
+The client can be used to make Oauth easier, do get,post,put and delete calls and handle file uploads.
 
 ##Authentication
 First make a client builder and pass the app ID and secret.
@@ -15,6 +15,7 @@ First make a client builder and pass the app ID and secret.
 		}
 		var clientBuilder = boxSDK.clientBuilder(appSettings)
 ```
+
 In your first request get the authurl and redirect the user.
 ###Authentication URL:
 ```javascript		
@@ -23,7 +24,7 @@ In your first request get the authurl and redirect the user.
 		res.redirect(path)
 ```
 
-Then pass the auth code to the client and handle with callback function (i.e. store tokens in cookie like in example).
+Then pass the auth code to the client and handle with a callback function (i.e. store tokens in cookie like in example).
 ###Retrieve Access Tokens:
 ```javascript
 	var client = clientBuilder.create()
@@ -102,18 +103,50 @@ You can use the client to make get or post requests like so.
 	client.post(path,data,callback)
 ```
 
+##File uploading:
+Currently the client supports uploading files from the server to box, the best way to do this is to use the methodLayerfunction 'uploadFile'.
+
+It will open the file and handle filename and formating so box can understand it.
+
+The file object requires specific formating:
+
+. filename = The whole filepath (the file name itself is taken automatically).
+. parent_id = The id of the folder you wish to upload to.
+
+The function requires a client, a file object and a callback, you can use it like so:
+###File Upload with methodlayer function:
+```javascript
+var fileObject = {
+	filename: __dirname + '/b.docx',
+	parent_id: id
+}
+boxSDK.methodLayer.files.uploadFile (client, fileObject, 
+	function(response,statCode){
+	console.log(response)
+})
+```
+
+You can also supply the file data directly to the object, it <b>MUST</b> however be in binary encoding otherwise the file won't upload correctly.
+Just place the data in the fileObject under  `fileObject.data` and the client will pick it up when the object is passed to it.
+
+If you aren't sure the file data isn't in binary you can convert it with:
+```javascript
+	var fileObject.data = new Buffer(fileData).toString('binary')
+```
+
+Incase you do want to use the client directly you can still use it.
+### Client upload:
+```javascript
+	var fileObject = {
+		filename: __dirname + '/b.docx',
+		parent_id: id
+	}
+	var path = urlB.host('upload').object('files').url
+
+	client.upload(path, file, function(response,statCode){
+		console.log(response)
+	})
+```
+
 ##Other functions
 
-There are other functions but they are not mentioned due to not being tested.
-For example the client also has:
-
-1.	client.put
-2.	client.patch
-3.	client.delete
-4.	client.upload
-
-But I'm unsure if they will work mostly because I have been unable to find information on them, I've made guesses but I can't be sure.
-
-There is also the Methods layer, some of the API functions are there but because I can't be sure of the client functions working, I can't be sure if they will work, the ones that should work are those that use 'get' and 'post' methods.
-
-I will try to get them working as I go along.

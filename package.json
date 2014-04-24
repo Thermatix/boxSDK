@@ -15,6 +15,9 @@
 									 "type"    	 : "git",
 									 "url"     	 : "https://github.com/Thermatix/boxSDK.git"
 	},
+	"bugs": {
+	    "url": "http://github.com/Thermatix/boxSDK/issues"
+	    },
 	"keywords"     :[
 									 "api",
 									 "box",
