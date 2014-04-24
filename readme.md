@@ -134,7 +134,7 @@ If you aren't sure the file data isn't in binary you can convert it with:
 	var fileObject.data = new Buffer(fileData).toString('binary')
 ```
 
-Incase you do want to use the client directly you can still use it.
+In case you do want to use the client directly you can still use it.
 ### Client upload:
 ```javascript
 	var fileObject = {
@@ -149,4 +149,13 @@ Incase you do want to use the client directly you can still use it.
 ```
 
 ##Other functions
+
+The purpose of the method layer is to make using the client easier, you don't need to use it to make use of the client but it makes using the box API easier.
+
+They're implemented one by one from top to bottom from in the same order as the function listing on the doc website, so when it says up to, it means all functions up to that one specified are implemented.
+
+At the moment the only functions implemented are:
+
+.Folder (all functions)
+.Files(Some of them, up to file upload)
 
