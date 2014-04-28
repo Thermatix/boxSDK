@@ -193,4 +193,5 @@ At the moment the only functions implemented are:
 - Events (no functions)
 - Search (all functions)
 - Users (all functions)
+- Groups
 
