@@ -133,7 +133,7 @@ var fileObject = {
 	filename: __dirname + '/b.docx',
 	parent_id: id
 }
-boxSDK.methodLayer.files.upload (client, fileObject, 
+boxSDK.files.upload (client, fileObject, 
 	function(response,statCode){
 	console.log(response)
 })
@@ -157,7 +157,7 @@ var file = {
 	parent_id: id
 }
 f = fs.createReadStream(file.filename,{encoding: 'binary'})
-f.pipe(boxSDK.methodLayer.files.upload(client,file,
+f.pipe(boxSDK.files.upload(client,file,
 	function (response, statcode){
 		console.log(response)
 }))
