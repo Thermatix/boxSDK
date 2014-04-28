@@ -147,8 +147,8 @@ If you aren't sure the file data isn't in binary you can convert it with:
 	var fileObject.data = new Buffer(fileData).toString('binary')
 ```
 
-###uploadin with streams
-You can also pipe data to the method as well, for the moment only streams that write <b>ONLY</b> file data are usable, streams that contain non file data(e.g. multipart forms) won't work correctly as there is no working parser, it will error if you try.
+###uploading with streams
+You can also pipe data to the method as well, however for the moment only streams that write <b>ONLY</b> file data are usable, streams that contain non file data(e.g. multipart forms) won't work correctly as there is no working parser, it will error if you try.
 
 ###File Upload with methodlayer function via streams
 ```javascript
@@ -163,12 +163,13 @@ f.pipe(boxSDK.files.upload(client,file,
 }))
 ```
 
-In case you do want to use the client directly you can still use it.
+In case you do want to use the client directly you can still use it, but it can't streams, if you want to pass it file data you need to pass it filedata under `fileObject.data`
 ### Client upload:
 ```javascript
 	var fileObject = {
 		filename: __dirname + '/b.docx',
-		parent_id: id
+		parent_id: id,
+		data : data
 	}
 	var path = urlB.host('upload').object('files').url
 
@@ -179,14 +180,14 @@ In case you do want to use the client directly you can still use it.
 
 ##Other functions
 
-The purpose of the method layer is to make using the client easier, you don't need to use it to make use of the client but it makes using the box API easier.
+The purpose of the method layer is to make using the client easier, you don't need to use it to make use of the client but it makes using the box API easier and they contain helper functions so you don't have to do so much.
 
 They're implemented one by one from top to bottom from in the same order as the function listing on the doc website, so when it says up to, it means all functions up to that one specified are implemented.
 
 At the moment the only functions implemented are:
 
 - Folder (all functions)
-- Files (all functions)(upload is partially supported via file from server and fata in binary format, can't directly stream from form)
+- Files (all functions)(upload is partially supported via file from server and fata in binary format, can't directly stream from form but from files and data only streams)
 - Collaborations (all functions)
 - Users(all Functions)
 
