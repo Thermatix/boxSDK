@@ -188,6 +188,7 @@ At the moment the only functions implemented are:
 
 - Folder (all functions)
 - Files (all functions)(upload is partially supported via file from server and fata in binary format, can't directly stream from form but from files and data only streams)
+- Comments (all functions)
 - Collaborations (all functions)
-- Users(all Functions)
+- Users (all functions)
 
