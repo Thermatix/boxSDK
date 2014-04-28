@@ -17,6 +17,18 @@ First make a client builder and pass the app ID and secret.
 ```
 
 In your first request get the authurl and redirect the user.
+
+<tt>clientBuilder.create()</tt> can take a string or an object, if you supply a string it will automatically assign that as the 'ACCESS_TOKEN'. It can also take a user's ID for when you want to do something 'as-user' but it requires the person logged in to be an Admin but it is optional. An object requires it to be formated as :
+
+```javascript		
+ var tokens = {
+ 	access_token : 'ACCESS_TOKEN',
+ 	refresh_token : 'REFRESH_TOKEN',
+ 	user    :   'user_id'
+ }
+
+```
+
 ###Authentication URL:
 ```javascript		
 		var client = clientBuilder.create()
@@ -61,6 +73,7 @@ Lastly you can refresh your access token
 		}
 		var path = client.getRefreshToken('REFRESH TOKEN',callback) 
 ```
+
 
 ##URL Builder:
 There is also the url builder you can use to make url building easier and more semantically readable.
@@ -157,5 +170,7 @@ They're implemented one by one from top to bottom from in the same order as the 
 At the moment the only functions implemented are:
 
 - Folder (all functions)
-- Files(all functions)(upload is partially supported via file from server and fata in binary format, can't directly stream from form)
+- Files (all functions)(upload is partially supported via file from server and fata in binary format, can't directly stream from form)
+- Collaborations (all functions)
+- Users(all Functions)
 

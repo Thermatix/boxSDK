@@ -30,7 +30,8 @@
 										"http" 				: "latest",
 										"url"  				: "latest",
 										"stream" 			: "latest",
-										"util" 				: "latest"
+										"util" 				: "latest",
+										"q"           : "latest"
 	},
 	"analyze" 		 : true,
 	"license" 		 : "BSD",
