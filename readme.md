@@ -147,6 +147,22 @@ If you aren't sure the file data isn't in binary you can convert it with:
 	var fileObject.data = new Buffer(fileData).toString('binary')
 ```
 
+###uploadin with streams
+You can also pipe data to the method as well, for the moment only streams that write <b>ONLY</b> file data are usable, streams that contain non file data(e.g. multipart forms) won't work correctly as there is no working parser, it will error if you try.
+
+###File Upload with methodlayer function via streams
+```javascript
+var file = {
+	filename: __dirname + '/a.jpg',
+	parent_id: id
+}
+f = fs.createReadStream(file.filename,{encoding: 'binary'})
+f.pipe(boxSDK.methodLayer.files.upload(client,file,
+	function (response, statcode){
+		console.log(response)
+}))
+```
+
 In case you do want to use the client directly you can still use it.
 ### Client upload:
 ```javascript
