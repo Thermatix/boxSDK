@@ -1,7 +1,7 @@
 {
 	"name" 				 : "boxsdk",
 	"preferGlobal" : false,
-	"version"      : "0.2.1",
+	"version"      : "0.2.3",
 	"author" 			 : "Thermatix <mbeckerwork@gmail.com>",
 	"description"  : "An SDK to make using the BOX API easier",
 	"contributors" :[],
