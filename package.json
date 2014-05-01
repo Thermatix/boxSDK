@@ -1,7 +1,7 @@
 {
 	"name" 				 : "boxsdk",
 	"preferGlobal" : false,
-	"version"      : "0.2.5",
+	"version"      : "0.2.6",
 	"author" 			 : "Thermatix <mbeckerwork@gmail.com>",
 	"description"  : "An SDK to make using the BOX API easier",
 	"contributors" :[],
@@ -21,7 +21,9 @@
 	"keywords"     :[
 									 "api",
 									 "box",
-									 "sdk"
+									 "sdk",
+									 "box.com",
+									 "box.net"
 	],
 	"dependencies" :{
 										"request"  		: "latest",
