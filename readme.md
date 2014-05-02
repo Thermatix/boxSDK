@@ -206,7 +206,7 @@ Functions implemented are:
 - Files (all functions)
 - Comments (all functions)
 - Collaborations (all functions)
-- Events (no functions)
+- Events (all functions (streamer is available but untested))
 - Search (all functions)
 - Users (all functions)
 - Groups (all functions)
