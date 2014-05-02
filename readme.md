@@ -13,7 +13,7 @@ First make a client builder and pass the app ID and secret.
 			secret: 'YOUR APP SECRET',
 			callBackURL : 'YOUR CALLBACK URL' // only if you need this
 		}
-		var clientBuilder = boxSDK.clientBuilder(appSettings)
+		var clientBuilder = boxSDK.clientBuilder.setup(appSettings)
 ```
 
 In your first request get the authurl and redirect the user.
