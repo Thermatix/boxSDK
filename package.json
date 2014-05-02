@@ -1,7 +1,7 @@
 {
 	"name" 				 : "boxsdk",
 	"preferGlobal" : false,
-	"version"      : "0.2.6",
+	"version"      : "0.2.10",
 	"author" 			 : "Thermatix <mbeckerwork@gmail.com>",
 	"description"  : "An SDK to make using the BOX API easier",
 	"contributors" :[],
@@ -32,8 +32,7 @@
 										"http" 				: "latest",
 										"url"  				: "latest",
 										"stream" 			: "latest",
-										"util" 				: "latest",
-										"q"           : "latest"
+										"util" 				: "latest"
 	},
 	"analyze" 		 : true,
 	"license" 		 : "BSD",

@@ -1,9 +1,12 @@
-#boxSDK for Node.js README
+
+[![NPM](https://nodei.co/npm/boxsdk.png)](https://nodei.co/npm/boxsdk/)
+
+#boxSDK 
 The client can be used to make Oauth easier, do get,post,put and delete calls and handle file uploads.
 
 ##Authentication
 First make a client builder and pass the app ID and secret.
-
+##
 <i>The client Builder should be outside of any requests, that way it's accessible from all requests; it's there so you don't have to give the client your appID and secret each time you need it.</i>
 ###Setup Client Factory:
 ```javascript
@@ -13,21 +16,12 @@ First make a client builder and pass the app ID and secret.
 			secret: 'YOUR APP SECRET',
 			callBackURL : 'YOUR CALLBACK URL' // only if you need this
 		}
-		var clientBuilder = boxSDK.clientBuilder(appSettings)
+		var clientBuilder = boxSDK.clientBuilder.setup(appSettings)
 ```
 
 In your first request get the authurl and redirect the user.
 
-<tt>clientBuilder.create()</tt> can take a string or an object, if you supply a string it will automatically assign that as the 'ACCESS_TOKEN'. It can also take a user's ID for when you want to do something 'as-user' but it requires the person logged in to be an Admin but it is optional. An object requires it to be formated as :
 
-```javascript		
- var tokens = {
- 	access_token : 'ACCESS_TOKEN',
- 	refresh_token : 'REFRESH_TOKEN',
- 	user    :   'user_id'
- }
-
-```
 
 ###Authentication URL:
 ```javascript		
@@ -74,6 +68,17 @@ Lastly you can refresh your access token
 		var path = client.getRefreshToken('REFRESH TOKEN',callback) 
 ```
 
+###Extra information regarding client builder
+<tt>clientBuilder.create()</tt> can take a string or an object, if you supply a string it will automatically assign that as the 'ACCESS_TOKEN'. It can also take a user's ID for when you want to do something 'as-user' but it requires the person logged in to be an Admin but it is optional. An object requires it to be formated as :
+
+```javascript		
+ var tokens = {
+ 	access_token : 'ACCESS_TOKEN',
+ 	refresh_token : 'REFRESH_TOKEN',
+ 	user    :   'user_id'
+ }
+
+```
 
 ##URL Builder:
 There is also the url builder you can use to make url building easier and more semantically readable.
