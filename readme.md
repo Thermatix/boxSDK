@@ -1,4 +1,7 @@
-#boxSDK for Node.js README
+
+[![NPM](https://nodei.co/npm/boxsdk.png)](https://nodei.co/npm/boxsdk/)
+
+#boxSDK 
 The client can be used to make Oauth easier, do get,post,put and delete calls and handle file uploads.
 
 ##Authentication
