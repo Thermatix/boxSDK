@@ -6,7 +6,7 @@ The client can be used to make Oauth easier, do get,post,put and delete calls an
 
 ##Authentication
 First make a client builder and pass the app ID and secret.
-##
+
 <i>The client Builder should be outside of any requests, that way it's accessible from all requests; it's there so you don't have to give the client your appID and secret each time you need it.</i>
 ###Setup Client Factory:
 ```javascript
